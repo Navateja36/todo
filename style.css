@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#todo-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#task-list {
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.delete-text {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding for better visibility */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    border-radius: 3px; /* Optional: Rounded corners */
+}
+
+.delete-text:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.delete-btn:hover {
+    background-color: #e53935;
+}
+/* Same CSS as before with minor adjustments for layout */
+#task-time {
+    font-size: 20px; /* Increase the font size */
+    padding: 8px; /* Add padding around the timer text */
+    background-color: #333; /* Set a background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Round the corners of the box */
+    width: auto; /* Allow width to adjust based on content */
+    min-width: 100px; /* Ensure the box has a minimum width */
+    text-align: center; /* Center align the text */
+    margin-top: 0; /* Space between task description and timer */
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 0; /* Set the gap to 0 */
+    margin: 0; /* Ensure no external margin */
+}
+
+#todo-container {
+    display: block; /* Makes the container independent */
+    width: 45%; /* Adjust width if needed */
+    padding: 20px;
+    margin: 60px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex-grow: 0;
+    overflow-y: auto; /* Allow scroll if content grows */
+    max-height: 500px; 
+}
+
+#sidecontainer {
+    display: block; /* Makes the container independent */
+    width: 45%; /* Adjust width if needed */
+    padding: 20px;
+    margin: 60px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex-grow: 0;
+    overflow-y: auto; /* Allow scroll if content grows */
+    max-height: 500px; 
+}
+
+
+.todo-container input,
+.todo-container button,
+.todo-container h1,
+.todo-container h2 {
+    margin: 0; /* Reset any margin from input, buttons, etc. */
+    padding: 0; /* Remove padding from inputs and buttons */
+}
+#node-input{
+    max-height: 450px;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+#saved-notes {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of notes to the next row */
+    gap: 10px; /* Adds space between notes */
+    justify-content: flex-start; /* Aligns notes to the left */
+}
+
+.note {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;  /* Set a fixed max height */
+    overflow-y: auto;   /* Enable vertical scrolling if content exceeds the max height */
+}
+.note-content {
+    color: black;
+    font-size: 1rem; /* Adjust font size if needed */
+  }
+  
+
+.note p {
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgb(18, 18, 18);
+}
+
+button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 12px; /* Adjust button size */
+}
+/* Change icon color */
+/* Style for the action icons with green color */
+.note img.action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.note img.action-icon:first-child {
+    right: 40px; /* Adjust the position for the 'edit' icon */
+}
+/* Hover effect to change color */
+img.action-icon:hover {
+    filter: invert(60%) sepia(85%) saturate(1200%) hue-rotate(220deg) brightness(105%) contrast(100%);
+}
+
+
+
+.note p:last-of-type {
+    color:black; /* Highlighted color for main note text */
+    /* font-size: 1.2rem; Larger font for focus */
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.note-actions {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    gap: 10px; /* Space between icons */
+}

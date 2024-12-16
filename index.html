@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="LOGO.png" sizes="32x32" type="image/png"> -->
+    <link rel="icon" href="LOGO.png" sizes="128x128" type="image/png">
+
+</head>
+<body style="background-color: black;">
+    <div  class="container">
+            <div style="background-color: rgb(69,69,69);" id="todo-container">
+                <h1 style="color: aliceblue;" >Interactive To-Do List</h1>
+                <input type="text" id="task-input" placeholder="Enter new task">
+                <input type="date" id="task-date" placeholder="Due date">
+                <input  style="margin-bottom: 21px;" type="time" id="task-time" placeholder="Set time (HH:MM)">
+                <button id="add-task">Add Task</button>
+                
+                <h2 style="color: aliceblue;">Tasks</h2>
+                <div id="task-list"></div>
+            </div>
+            <div style="background-color: rgb(69,69,69);" id="sidecontainer">
+                <h1 style="color: aliceblue;">Notes</h1>
+                <textarea rows="8" id="note-input" placeholder="Write your note here"></textarea>
+                <button id="save-note">Save Note</button>
+                <h2 style="color: aliceblue;">Your Saved Notes</h2>
+                <div  id="saved-notes"></div>
+            </div>
+    </div>
+
+    <!-- Audio Element for Timer Sound -->
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>
